@@ -1,0 +1,36 @@
+{
+  "name": "clearwarns",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "qFJBw",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${server.id}_warns",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${server.id}_warns",
+      "defaultVal": "0",
+      "storage": "2",
+      "varName2": "warnings",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} now has 0 warnings (cleared)",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
