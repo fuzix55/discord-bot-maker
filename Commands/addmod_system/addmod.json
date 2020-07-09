@@ -24,7 +24,7 @@
     {
       "member": "1",
       "varName": "members.name",
-      "dataName": "moderation.verify",
+      "dataName": "${server.id}_verify",
       "changeType": "0",
       "value": "1",
       "name": "Control Member Data"
