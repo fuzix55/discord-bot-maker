@@ -1,0 +1,73 @@
+{
+  "name": "translate",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "zOSPs",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "from",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "to",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "incomingMessage",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "code": "const translate = this.getWrexMods().require('@vitalets/google-translate-api');\n \n\n  translate(tempVars(\"incomingMessage\"), {from: tempVars(\"from\"),to: tempVars(\"to\")}).then(res => {\n    console.log(tempVars(\"incomingMessage\") +' [tempVars(\"lang\")]: ' + res.text);\n    this.storeValue(res.text, 1, \"dbm-var\", cache)\n    this.callNextAction(cache); \n}).catch(err => {\n    msg.channel.send(err.message);\n    console.error(err);\n});\n\n\n\n",
+      "behavior": "1",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"from\")}**\n${tempVars(\"incomingMessage\")}\n\n**${tempVars(\"to\")}**\n${tempVars(\"dbm-var\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Correct usage is: \n`translate [from] [to] [text to translate]`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
