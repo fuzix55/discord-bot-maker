@@ -1,0 +1,56 @@
+{
+  "name": "addmod",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "qEjYM",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "6",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "members.name",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "members.name",
+      "dataName": "moderation.verify",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Added ${tempVars(\"members.name\")} as a mod",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please @ someone to remove them as a moderator!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
