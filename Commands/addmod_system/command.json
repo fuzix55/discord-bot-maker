@@ -7,7 +7,7 @@
     {
       "member": "1",
       "varName": "",
-      "dataName": "moderation.verify",
+      "dataName": "${server.id}_verify",
       "comparison": "1",
       "value": "1",
       "iftrue": "0",
