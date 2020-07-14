@@ -1,8 +1,8 @@
 {
-  "name": "auto-mod",
+  "name": "badword",
   "permissions": "NONE",
   "restriction": "1",
-  "_id": "xbLdm",
+  "_id": "JPzBc",
   "actions": [
     {
       "server": "0",
@@ -13,7 +13,7 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "1",
-      "iffalseVal": "6",
+      "iffalseVal": "",
       "name": "Check Server Data"
     },
     {
@@ -21,14 +21,14 @@
       "varName": "",
       "info": "2",
       "storage": "1",
-      "varName2": "text",
+      "varName2": "msg",
       "name": "Store Message Info"
     },
     {
       "storage": "1",
-      "varName": "text",
-      "comparison": "5",
-      "value": "nigga",
+      "varName": "msg",
+      "comparison": "12",
+      "value": "(nigger|nigga|black people|homosexual|gypsies|Gypsies|gypsie|Gypsie|gypsy|Gypsy|Fuck|fuck|fuk|FUCK|FUK|prick|bastard|bellend|ass|cunt|shit|gobdaw|fecker|Ráicleach|Cúl Tóna|aiteann|Téigh go dtí ifreann|Póg mo thóin|merde|putain|C’est des Conneries|salope|fils de salope|T’as Pas de Couilles|je m”en fous|Osti de Calisse de Tabarnak|mierda|Váyase a la Mierda|que te folle un pez| puto| verga|cojones|Coño|cazzo|chepalle|tette|stronzo|fanculo|vaffanculo|pompinara|arschgesicht|Scheißkopf|Küss Meinen Arsch|verpiss dich|Zur Hölle Mit|wichser|arschgeige|cabra|Cabrão|monte de merda|caralho|vai para o caralho|rego do cu|puta que pariu|chupa mos|Xуй|Хуй|Cучка|Oбосра́ться|Не будь жо́пой|блядь|Да ебал я это|王八蛋|混蛋|狗屁|混帳|他妈的|去你的 |我肏|くそ|やりまん|くそったれ Kusottare|ぶす  |死ねえ|くたばれ、ボケ|아, 씨발|Ah, Sshi-bal| Kutabare, boke | Shi’ne | Busu | Kuso | Yariman |씨방새| Sshi-bang-sae |개새| Gae-sae |년| Nyeon |좆| Jot |좆 같은 놈/년| Jeot-gat-eun-nom |아, 좆같네|Ah, jot-gat-ne|penis|pussy||ass hole|ass|bitch|sex|hooker|stripper|gay|||||||||||||||||||||)",
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "1",
@@ -36,22 +36,14 @@
       "name": "Check Variable"
     },
     {
-      "channel": "0",
-      "varName": "",
-      "message": "you said a bad word!",
       "storage": "0",
-      "varName2": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "name": "End Action Sequence"
+      "varName": "",
+      "name": "Delete Message"
     },
     {
       "channel": "0",
       "varName": "",
-      "message": "This didn't work!",
+      "message": "${member}, do not use langauge like that! **[AUTO-MOD]**",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
